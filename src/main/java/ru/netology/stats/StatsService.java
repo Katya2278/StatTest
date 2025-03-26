@@ -25,7 +25,7 @@ public class StatsService {
     }
 
     public long average(long[] sales) {
-        long totalSale = sum(sales);
+        long totalSale = sum (sales);
         long averegeSale = totalSale / 12;
         return averegeSale;
     }
