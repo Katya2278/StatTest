@@ -6,9 +6,9 @@ public class StatservisTest {
     @Test
     public void MonthofBigSales() {
         StatsService service = new StatsService();
-        int[] sum = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expected = 8;
-        int actual = service.peakSels(sum);
+        long[] sum = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long expected = 8;
+        long actual = service.peakSels(sum);
 
         Assertions.assertEquals(expected, actual);
     }
@@ -35,9 +35,9 @@ public class StatservisTest {
     @Test
     public void MonthofminSales() {
         StatsService service = new StatsService();
-        int[] summ = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expected = 9;
-        int actual = service.minSels(summ);
+        long[] summ = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long expected = 9;
+        long actual = service.minSels(summ);
 
         Assertions.assertEquals(expected, actual);
     }
