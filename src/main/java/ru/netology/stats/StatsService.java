@@ -39,7 +39,7 @@ public class StatsService {
         }
         return minday + 1;
     }
-    public int below (long[]sales) {
+    public long below (long[]sales) {
         long averageSale = average(sales);
         int counter = 0;
         for (long sale : sales) {
@@ -51,9 +51,9 @@ public class StatsService {
     }
 
 
-    public int above (long[]sales) {
+    public long above (long[]sales) {
         long averageSale = average(sales);
-        int counter = 0;
+        long counter = 0;
         for (long sale : sales) {
             if (sale > averageSale) {
                 counter++;
