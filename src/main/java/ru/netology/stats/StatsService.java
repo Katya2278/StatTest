@@ -4,9 +4,9 @@ import java.util.Arrays;
 import java.util.concurrent.RecursiveTask;
 
 public class StatsService {
-    public long peakSels(long[] sales) {
-        long peakday = 0;
-        for (long i = 0; i < sales.length; i++) {
+    public int peakSels(long[] sales) {
+        int peakday = 0;
+        for (int i = 0; i < sales.length; i++) {
 
             if (sales[(int) i] >= sales[(int) peakday]) {
                 peakday = i;
@@ -29,9 +29,9 @@ public class StatsService {
         long averegeSale = totalSale / 12;
         return averegeSale;
     }
-    public long minSels(long[] sales) {
-       long minday = 0;
-        for (long i = 0; i < sales.length; i++) {
+    public int minSels(long[] sales) {
+       int minday = 0;
+        for (int i = 0; i < sales.length; i++) {
 
             if (sales[(int) i] <= sales[(int) minday]) {
                 minday = i;
@@ -42,7 +42,7 @@ public class StatsService {
     }
     public long below (long[]sales) {
         long averageSale = average(sales);
-        long counter = 0;
+        int counter = 0;
         for (long sale : sales) {
             if (sale < averageSale) {
                 counter++;
@@ -54,7 +54,7 @@ public class StatsService {
 
     public long above (long[]sales) {
         long averageSale = average(sales);
-        long counter = 0;
+        int counter = 0;
         for (long sale : sales) {
             if (sale > averageSale) {
                 counter++;
