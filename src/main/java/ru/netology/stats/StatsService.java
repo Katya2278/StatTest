@@ -25,12 +25,13 @@ public class StatsService {
     }
 
     public long average(long[] sales) {
-        long totalSale = sum (sales);
+        long totalSale = sum(sales);
         long averegeSale = totalSale / 12;
         return averegeSale;
     }
+
     public int minSels(long[] sales) {
-       int minday = 0;
+        int minday = 0;
         for (int i = 0; i < sales.length; i++) {
 
             if (sales[(int) i] <= sales[(int) minday]) {
@@ -40,7 +41,8 @@ public class StatsService {
         }
         return minday + 1;
     }
-    public long below (long[]sales) {
+
+    public int below(long[] sales) {
         long averageSale = average(sales);
         int counter = 0;
         for (long sale : sales) {
@@ -52,7 +54,7 @@ public class StatsService {
     }
 
 
-    public long above (long[]sales) {
+    public int above(long[] sales) {
         long averageSale = average(sales);
         int counter = 0;
         for (long sale : sales) {
